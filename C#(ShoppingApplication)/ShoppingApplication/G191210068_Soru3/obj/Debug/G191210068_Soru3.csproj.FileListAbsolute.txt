@@ -1,0 +1,9 @@
+C:\Users\Hacer\source\repos\G191210068_Soru3\G191210068_Soru3\bin\Debug\G191210068_Soru3.exe.config
+C:\Users\Hacer\source\repos\G191210068_Soru3\G191210068_Soru3\bin\Debug\G191210068_Soru3.exe
+C:\Users\Hacer\source\repos\G191210068_Soru3\G191210068_Soru3\bin\Debug\G191210068_Soru3.pdb
+C:\Users\Hacer\source\repos\G191210068_Soru3\G191210068_Soru3\obj\Debug\G191210068_Soru3.csprojAssemblyReference.cache
+C:\Users\Hacer\source\repos\G191210068_Soru3\G191210068_Soru3\obj\Debug\G191210068_Soru3.Form1.resources
+C:\Users\Hacer\source\repos\G191210068_Soru3\G191210068_Soru3\obj\Debug\G191210068_Soru3.Properties.Resources.resources
+C:\Users\Hacer\source\repos\G191210068_Soru3\G191210068_Soru3\obj\Debug\G191210068_Soru3.csproj.GenerateResource.cache
+C:\Users\Hacer\source\repos\G191210068_Soru3\G191210068_Soru3\obj\Debug\G191210068_Soru3.exe
+C:\Users\Hacer\source\repos\G191210068_Soru3\G191210068_Soru3\obj\Debug\G191210068_Soru3.pdb

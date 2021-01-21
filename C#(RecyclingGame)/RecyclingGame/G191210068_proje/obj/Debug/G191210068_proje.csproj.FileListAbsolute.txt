@@ -1,0 +1,9 @@
+C:\Users\Hacer\source\repos\G191210068_proje\G191210068_proje\obj\Debug\G191210068_proje.csprojAssemblyReference.cache
+C:\Users\Hacer\source\repos\G191210068_proje\G191210068_proje\obj\Debug\G191210068_proje.Form1.resources
+C:\Users\Hacer\source\repos\G191210068_proje\G191210068_proje\obj\Debug\G191210068_proje.csproj.GenerateResource.cache
+C:\Users\Hacer\source\repos\G191210068_proje\G191210068_proje\bin\Debug\G191210068_proje.exe.config
+C:\Users\Hacer\source\repos\G191210068_proje\G191210068_proje\bin\Debug\G191210068_proje.exe
+C:\Users\Hacer\source\repos\G191210068_proje\G191210068_proje\bin\Debug\G191210068_proje.pdb
+C:\Users\Hacer\source\repos\G191210068_proje\G191210068_proje\obj\Debug\G191210068_proje.Properties.Resources.resources
+C:\Users\Hacer\source\repos\G191210068_proje\G191210068_proje\obj\Debug\G191210068_proje.exe
+C:\Users\Hacer\source\repos\G191210068_proje\G191210068_proje\obj\Debug\G191210068_proje.pdb

@@ -1,0 +1,9 @@
+C:\Users\Hacer\source\repos\G191210068_Soru2\G191210068_Soru2\bin\Debug\G191210068_Soru2.exe.config
+C:\Users\Hacer\source\repos\G191210068_Soru2\G191210068_Soru2\bin\Debug\G191210068_Soru2.exe
+C:\Users\Hacer\source\repos\G191210068_Soru2\G191210068_Soru2\bin\Debug\G191210068_Soru2.pdb
+C:\Users\Hacer\source\repos\G191210068_Soru2\G191210068_Soru2\obj\Debug\G191210068_Soru2.csprojAssemblyReference.cache
+C:\Users\Hacer\source\repos\G191210068_Soru2\G191210068_Soru2\obj\Debug\G191210068_Soru2.Form1.resources
+C:\Users\Hacer\source\repos\G191210068_Soru2\G191210068_Soru2\obj\Debug\G191210068_Soru2.Properties.Resources.resources
+C:\Users\Hacer\source\repos\G191210068_Soru2\G191210068_Soru2\obj\Debug\G191210068_Soru2.csproj.GenerateResource.cache
+C:\Users\Hacer\source\repos\G191210068_Soru2\G191210068_Soru2\obj\Debug\G191210068_Soru2.exe
+C:\Users\Hacer\source\repos\G191210068_Soru2\G191210068_Soru2\obj\Debug\G191210068_Soru2.pdb
