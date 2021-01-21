@@ -1,0 +1,253 @@
+
+----------------------------------------------------------------------------------------------
+********************************     işlev/saklı yordam     **********************************
+----------------------------------------------------------------------------------------------
+
+
+
+-- FUNCTION: public.kayit_sirala_ogretmen(integer)
+
+-- DROP FUNCTION public.kayit_sirala_ogretmen(integer);
+
+CREATE OR REPLACE FUNCTION public.kayit_sirala_ogretmen(
+	ogretmen integer)
+    RETURNS TABLE(ozeldersid integer) 
+    LANGUAGE 'sql'
+
+    COST 100
+    VOLATILE 
+    ROWS 1000
+    
+AS $BODY$
+select ozeldersid from ozelders where ogretmenid = ogretmen;
+$BODY$;
+
+ALTER FUNCTION public.kayit_sirala_ogretmen(integer)
+    OWNER TO postgres;
+
+
+
+*****************************************************************
+
+
+
+-- FUNCTION: public.ogrenci_kayitsirala(integer)
+
+-- DROP FUNCTION public.ogrenci_kayitsirala(integer);
+
+CREATE OR REPLACE FUNCTION public.ogrenci_kayitsirala(
+	ogrenci integer)
+    RETURNS TABLE(ozeldersid integer) 
+    LANGUAGE 'sql'
+
+    COST 100
+    VOLATILE 
+    ROWS 1000
+    
+AS $BODY$
+select ozeldersid from ozelders where ogrenciid =ogrenci;
+$BODY$;
+
+ALTER FUNCTION public.ogrenci_kayitsirala(integer)
+    OWNER TO postgres;
+
+
+*******************************************************************
+
+-- PROCEDURE: public.ogrenci_kayit(text, text, text, integer, integer, text, text)
+
+-- DROP PROCEDURE public.ogrenci_kayit(text, text, text, integer, integer, text, text);
+
+CREATE OR REPLACE PROCEDURE public.ogrenci_kayit(
+	ad text,
+	soyad text,
+	kullaniciad text,
+	sifre integer,
+	yas integer,
+	cinsiyet text,
+	kullanici text)
+LANGUAGE 'plpgsql'
+AS $BODY$
+begin 
+insert into kullanici values(DEFAULT,ad,soyad,kullaniciad,sifre,yas,cinsiyet,kullanici);
+END;
+$BODY$;
+
+
+
+**************************************************************************
+
+
+
+-- PROCEDURE: public.ozel_ders_ekle(integer, integer, integer, integer, integer)
+
+-- DROP PROCEDURE public.ozel_ders_ekle(integer, integer, integer, integer, integer);
+
+CREATE OR REPLACE PROCEDURE public.ozel_ders_ekle(
+	dershane integer,
+	bolum integer,
+	ders integer,
+	ogretmen integer,
+	ogrenci integer)
+LANGUAGE 'plpgsql'
+AS $BODY$
+begin 
+insert into ozelders values(DEFAULT,dershane,bolum,ders,ogretmen,ogrenci);
+END;
+$BODY$;
+
+
+*********************************************************************************
+
+-- PROCEDURE: public.ozel_ders_sil(integer)
+
+-- DROP PROCEDURE public.ozel_ders_sil(integer);
+
+CREATE OR REPLACE PROCEDURE public.ozel_ders_sil(
+	kayit integer)
+LANGUAGE 'plpgsql'
+AS $BODY$
+begin 
+delete from ozelders Where ozeldersid = kayit;
+END;
+$BODY$;
+
+
+************************************************************************************
+
+-- PROCEDURE: public.siparis_ekle(integer, integer)
+
+-- DROP PROCEDURE public.siparis_ekle(integer, integer);
+
+CREATE OR REPLACE PROCEDURE public.siparis_ekle(
+	ogrenciid integer,
+	kitapid integer)
+LANGUAGE 'plpgsql'
+AS $BODY$
+begin 
+insert into siparis values(DEFAULT,ogrenciid,kitapid);
+END;
+$BODY$;
+
+
+************************************************************************************
+
+-- PROCEDURE: public.siparis_sil(integer)
+
+-- DROP PROCEDURE public.siparis_sil(integer);
+
+CREATE OR REPLACE PROCEDURE public.siparis_sil(
+	siparis_id integer)
+LANGUAGE 'plpgsql'
+AS $BODY$
+begin 
+delete from siparis where siparisid=siparis_id;
+END;
+$BODY$;
+
+
+*************************************************************************************
+
+
+
+
+
+-------------------------------------------------------------------------------------
+********************************     TRİGGER       **********************************
+-------------------------------------------------------------------------------------
+
+
+-- FUNCTION: public.stok2()
+
+-- DROP FUNCTION public.stok2();
+
+CREATE FUNCTION public.stok2()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE NOT LEAKPROOF
+AS $BODY$
+declare
+kitapsiparis integer;
+begin
+update kitap set stokmiktari=stokmiktari+1 where kitapid=OLD.kitapid;
+return new;
+end;
+$BODY$;
+
+ALTER FUNCTION public.stok2()
+    OWNER TO postgres;
+
+
+-----------------------------------------------------------------------------------------
+
+
+
+-- FUNCTION: public.stok()
+
+-- DROP FUNCTION public.stok();
+
+CREATE FUNCTION public.stok()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE NOT LEAKPROOF
+AS $BODY$
+declare
+kitapsiparis integer;
+begin
+kitapsiparis:=(select kitapid from siparis order by siparisid desc limit 1);
+update kitap set stokmiktari=stokmiktari-1 where kitapid=kitapsiparis;
+return new;
+end;
+$BODY$;
+
+ALTER FUNCTION public.stok()
+    OWNER TO postgres;
+
+
+----------------------------------------------------------------------------------------
+
+
+-- FUNCTION: public.toplam()
+
+-- DROP FUNCTION public.toplam();
+
+CREATE FUNCTION public.toplam()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE NOT LEAKPROOF
+AS $BODY$
+begin
+update toplam_kullanici set toplam=toplam+1;
+return new;
+end;
+$BODY$;
+
+ALTER FUNCTION public.toplam()
+    OWNER TO postgres;
+
+
+----------------------------------------------------------------------------------------
+
+-- FUNCTION: public.toplam2()
+
+-- DROP FUNCTION public.toplam2();
+
+CREATE FUNCTION public.toplam2()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE NOT LEAKPROOF
+AS $BODY$
+begin
+update toplam_kullanici set toplam=toplam-1;
+return new;
+end;
+$BODY$;
+
+ALTER FUNCTION public.toplam2()
+    OWNER TO postgres;
+
+-----------------------------------------------------------------------------------------

@@ -1,0 +1,81 @@
+#cover{
+	height:100%;
+}
+#cover{
+	
+	background-image:url("images/arkaplan.jpg");
+	background-size:cover;
+    background-repeat: no-repeat;
+}
+.sosyal{
+	padding:10%;
+}
+/* anasayfa css */
+h1{
+	margin-top:10%;
+	font-family:'Montserrat','san-serif';
+	font-size:24px;
+}
+h3{
+	margin-top:10%;
+	font-family:'Montserrat','san-serif';
+	font-size:18px;
+}
+
+.btn-primary{
+	
+	background-color:grey;
+	border :0;
+}
+a.nav-link{
+	font-family:'Montserrat','san-serif';
+	color:white !important;	
+	transition:color 0.5s ease;
+	margin:10px;
+}
+a.nav-link:hover{
+	background-color:grey;
+	color:black !important;
+}
+.footer p{ font:13px arial bold; text-align:center }
+
+#hobi{
+	
+	padding:120px 0;
+}
+.hobi-top{
+	text-align:center;
+	background-color:grey;
+}
+/* eğitim css */
+table{
+	width:80%;
+	margin-left:auto;	
+	max-width:1024px;min-width:2px;
+	margin:20px 20px 20px 50px;
+}
+/* iletişim css */
+.td2{
+	height:25px;
+	border:solid red 1px;
+	text-align:center;
+	background-color:#FFFFE0;
+    max-width:1024px;min-width:2px;
+	
+}
+.td3{
+	height:25px;
+	border:solid red 1px ;
+	text-align:center;
+	background-color:#FFFFE0;
+    max-width:1024px;min-width:2px;
+
+}
+.td4{
+	height:25px;
+	border:solid red 1px;
+	text-align:center;
+	background-color:#DCDCDC;
+    max-width:1024px;min-width:2px;
+	
+}
