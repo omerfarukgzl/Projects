@@ -1,0 +1,8 @@
+﻿  Okul.cpp
+C:\Users\Hacer\source\repos\omerproje\omerproje\Okul.cpp(8,19): warning C4309:  'initializing': truncation of constant value
+C:\Users\Hacer\source\repos\omerproje\omerproje\Okul.cpp(9,12): warning C4309:  'initializing': truncation of constant value
+C:\Users\Hacer\source\repos\omerproje\omerproje\Okul.cpp(10,19): warning C4309:  'initializing': truncation of constant value
+C:\Users\Hacer\source\repos\omerproje\omerproje\Okul.cpp(11,19): warning C4309:  'initializing': truncation of constant value
+C:\Users\Hacer\source\repos\omerproje\omerproje\Okul.cpp(12,19): warning C4309:  'initializing': truncation of constant value
+C:\Users\Hacer\source\repos\omerproje\omerproje\Okul.cpp(13,14): warning C4309:  'initializing': truncation of constant value
+  omerproje.vcxproj -> C:\Users\Hacer\source\repos\omerproje\Debug\omerproje.exe
